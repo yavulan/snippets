@@ -1,0 +1,50 @@
+// from http://stackoverflow.com/a/2610741 Answered by [toscho]
+@mixin placeholder-color( $color ){
+   // WebKit, Blink, Edge
+  &::-webkit-input-placeholder {
+    color:    $color;
+  }
+  // Firefox 4 to 18
+  &:-moz-placeholder {
+    color:    $color;
+    opacity:  1;
+  }
+  // Firefox 19+
+  &::-moz-placeholder {
+    color:    $color;
+    opacity:  1;
+  }
+  // IE 10-11
+  &:-ms-input-placeholder {
+    color:    $color;
+  }
+}
+
+
+
+// customize radio snippet
+//<input type="radio" checked name="test" value="test" id="test"  />
+//<label for="test"></label>
+
+.container{
+//  container start
+
+  input[type=radio] {
+    display: none;
+  }
+
+  input[type=radio] + label {
+    cursor: pointer;
+
+    &:hover {
+
+    }
+  }
+
+  input[type=radio]:checked + label {
+
+  }
+
+//  container end
+}
+
